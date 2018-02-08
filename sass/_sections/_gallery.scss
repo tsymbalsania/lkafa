@@ -1,0 +1,52 @@
+.gallery {
+	background: #000000 url("../img/gallery.png") 50% 50% no-repeat;
+	height: 100vh;
+	background-size: cover;
+	min-height: 400px;
+	position: relative;
+	background-attachment: fixed;
+	&__link {
+		transition: all .5s;
+		display: inline-block;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-size: 18px;
+		padding: 54px 170px;
+		background-color: rgba(250, 16, 22, .75);
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #ffffff;
+		&:focus, &:active {
+			color: #ffffff;
+		}
+		&:hover {
+			text-decoration: none;
+			background-color: rgb(250, 16, 22);
+			color: #ffffff;
+		}
+		span {
+			display: block;
+			font-size: 18px;
+		}
+		b {
+			font-size: 36px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.gallery {
+		height: auto;
+		&__link {
+			padding: 20px 50px;
+			span {
+				font-size: 14px;
+			}
+			b {
+				font-size: 26px;
+			}
+		}
+	}
+}

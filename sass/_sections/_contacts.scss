@@ -1,0 +1,35 @@
+.contacts {
+	padding: 30px 30px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,.75);
+	margin-bottom: 20px;
+	&__content {
+		margin: 0 0 20px;
+		&.last {
+			padding-top: 22px;
+			p {
+				margin-bottom: 0;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		p {
+			color: #ffffff;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		a {
+			color: #fa1016;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

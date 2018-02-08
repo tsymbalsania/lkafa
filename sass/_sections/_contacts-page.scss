@@ -1,0 +1,142 @@
+.contacts-page {
+	background-image: url("../img/post-page.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+	padding: 150px 0 50px;
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		content: '';
+		background-color: rgba(0,0,0, .5);
+	}
+	&__content {
+		position: relative;
+		z-index: 10;
+	}
+	&__form {
+		padding: 50px 80px;
+		margin-bottom: 20px;
+		background-color: rgba(0, 0, 0, 0.75);
+		min-height: 440px;
+		input, textarea {
+			display: block;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.50);
+			border: none;
+			color: #ffffff;
+			padding: 10px 20px;
+			margin-bottom: 15px;
+			&:focus,
+			&:active {
+				outline: none;
+			}
+		}
+		textarea {
+			min-height: 90px;
+		}
+		input[type="submit"] {
+			background-color: rgba(250, 16, 22, 0.75);
+			transition: all .5s;
+			margin-bottom: 0;
+			padding: 15px 20px;
+			&:hover {
+				background-color: #fa1016;
+			}
+		}
+	}
+	&__needs {
+		padding: 50px 30px;
+		background-color: rgba(0, 0, 0, 0.75);
+		h2 {
+			color: #f2b100;
+			font-size: 32px;
+			margin: 0;
+			text-align: center;
+		}
+		ul {
+			padding: 20px 0;
+			margin: 0;
+			list-style: none;
+			li {
+				display: block;
+				margin: 0 60px;
+				border-bottom: 1px solid rgba(255,255,255,.1);
+			}
+		}
+	}
+	&__link {
+		padding: 10px 60px;
+		font-size: 20px;
+		color: #f2b100;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: table;
+		width: 100%;
+		margin-bottom: 1px;
+		cursor: pointer;
+		&.active {
+			i {
+				transform: rotate(90deg);
+			}
+		}
+		i {
+			float: right;
+			font-size: 20px;
+			padding: 8px 0;
+			transition: all .5s;
+		}
+	}
+	&__link-content {
+		display: none;
+		padding: 10px 60px;
+		background-color: #fff;
+		color: #000000;
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			background-color: rgba(250, 16, 22, 0.75);
+			transition: all .5s;
+			margin: 20px 0;
+			display: inline-block;
+			padding: 10px 20px;
+			color: #ffffff;
+			&:hover {
+				text-decoration: none;
+				background-color: #fa1016;
+			}
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.contacts-page {
+		&__form {
+			padding: 50px 20px;
+			input, textarea {
+				border: 1px solid  #fa1016;
+			}
+		}
+		&__needs {
+			padding: 20px 0;
+			ul {
+				li {
+					margin: 0;
+				}
+			}
+		}
+		&__link {
+			padding: 10px 20px;
+			font-size: 16px;
+			i {
+				padding: 4px 0;
+			}
+		}
+		&__link-content {
+			padding: 10px 20px;
+		}
+	}
+}

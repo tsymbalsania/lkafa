@@ -1,0 +1,45 @@
+.pagination {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	width: 40px;
+	transform: translateY(-50%);
+	z-index: 150;
+	.nav {
+		li {
+			&.active {
+				a {
+					background-color: #fa1016;
+				}
+			}
+			a {
+				padding: 0;
+				background-color: rgba(250, 16, 22, .25);
+				&:focus {
+					outline: none;
+					background-color: inherit;
+				}
+				&:hover {
+					background-color: #fa1016;
+				}
+			}
+		}
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li {
+			display: block;
+		}
+	}
+	a {
+		margin: 10px auto;
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid #fa1016;
+		transition: all .5s;
+	}
+}

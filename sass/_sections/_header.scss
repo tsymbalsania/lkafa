@@ -1,0 +1,154 @@
+
+.header {
+	padding-top: 30px;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all .5s;
+	&.fixed {
+		background-color: rgba(0,0,0, .9);
+	}
+	&:after {
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 62%;
+		content: '';
+		height: 3px;
+		background-image: url("../img/rep-line.png");
+		background-repeat: repeat-x;
+		border-top-right-radius: 3px;
+	}
+	&:before {
+		position: absolute;
+		bottom: 30px;
+		right: 0;
+		left: 62%;
+		content: '';
+		height: 3px;
+		background-image: url("../img/rep-line.png");
+		background-repeat: repeat-x;
+		border-top-left-radius: 3px;
+	}
+	&__mobile-toggle {
+		display: none;
+		height: 40px;
+		width: 40px;
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		border-radius: 5px;
+		padding: 10px 5px;
+		span {
+			display: block;
+			height: 2px;
+			background-color: #fa1016;
+			& + span {
+				margin-top: 6px;
+			}
+		}
+	}
+	&__logo {
+		text-align: center;
+		img {
+			margin: 0 auto;
+		}
+	}
+	&__nav {
+		padding: 0 0 22px;
+		&.left {
+			text-align: left;
+			margin-right: -50px;
+		}
+		&.right {
+			text-align: right;
+			margin-left: -50px;
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			li {
+				display: inline-block;
+				padding: 0 15px;
+				a {
+					display: block;
+					color: #ffffff;
+					text-transform: uppercase;
+					font-size: 14px;
+					transition: all .5s;
+					&:hover {
+						text-decoration: none;
+						color: #fa1016;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.header {
+		&:after {
+			right: 65%;
+		}
+		&:before {
+			left: 65%;
+		}
+		&__nav {
+			ul {
+				li {
+					padding: 0px 5px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.header {
+		padding: 10px 0 0;
+		background-color: rgba(0,0,0, .9);
+		&:after,
+		&:before {
+			display: none;
+		}
+		&__mobile-toggle {
+			display: block;
+		}
+		&__logo {
+			img {
+				max-width: 200px;
+			}
+		}
+		&__nav {
+			padding: 0;
+			display: none;
+			&.left {
+				text-align: center;
+				margin-right: 0;
+			}
+			&.right {
+				text-align: center;
+				margin-left: 0;
+			}
+			ul {
+				li {
+					display: block;
+					text-align: center;
+					margin: 5px 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 2000px) {
+	.header {
+		&:after {
+			right: 57%;
+		}
+		&:before {
+			left: 57%;
+		}
+	}
+}

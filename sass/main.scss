@@ -1,0 +1,231 @@
+// @import "libs";
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&:before, &:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	&::-webkit-input-placeholder {
+		color: #666;
+		opacity: 1;
+	}
+	&:-moz-placeholder {
+		color: #666;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: #666;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: #666;
+		opacity: 1;
+	}
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+
+html, body {
+	height: 100%;
+}
+a {
+	&:visited,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	overflow-x: hidden;
+	opacity: 1;
+	font-family: 'Roboto', sans-serif;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.lity {
+	background-color: rgba(0,0,0,.5);
+}
+.lity-close {
+	display: none;
+}
+.slick-slide {
+	&:focus, &:active {
+		outline: none;
+	}
+}
+.slick-prev {
+	z-index: 100;
+	left: 70px;
+}
+.slick-next {
+	z-index: 100;
+	right: 70px;
+}
+.slick-prev:before, .slick-next:before {
+	font-size: 40px;
+	font-family: FontAwesome;
+}
+.slick-prev:before {
+	content: "\f104";
+}
+.slick-next:before {
+	content: "\f105";
+}
+// Start Preloader
+@import "_sections/_preloader.scss";
+// End Preloader
+
+// Start Social
+@import "_sections/_social.scss";
+// End Social
+
+// Start Pagination
+@import "_sections/_pagination.scss";
+// End Pagination
+
+// Start Header
+@import "_sections/_header.scss";
+//  End Header
+
+// Start Banner Section
+@import "_sections/_banner.scss";
+// End Banner Section
+
+// Start Events Section
+@import "_sections/_events.scss";
+// End Events Section
+
+// Start Menu Section
+@import "_sections/_menu.scss";
+// End Menu Section
+
+// Start Veni cart Section
+@import "_sections/_vine-cart.scss";
+// End Veni cart Section
+
+// Start Gallery Section
+@import "_sections/_gallery.scss";
+// End Gallery Section
+
+// Start Counters Section
+@import "_sections/_counters.scss";
+// End Counters Section
+
+// Start Awards Section
+@import "_sections/_awards.scss";
+// End Awards Section
+
+// Start Contacts Section
+@import "_sections/_contacts.scss";
+// End Contacts Section
+
+// Start Places Section
+@import "_sections/_places.scss";
+// End Places Section
+
+// Start Post-Page Section
+@import "_sections/_post-page.scss";
+// End Post-Page Section
+
+// Start Gallery Page Section
+@import "_sections/_gallery-page.scss";
+// End Gallery Page Section
+
+// Start Images-Only Section
+@import "_sections/_gallery-images-only.scss";
+// End Images-Only Section
+
+// Start News PAge Section
+@import "_sections/_news-page.scss";
+// End News PAge Section
+
+// Start Places Page Section
+@import "_sections/_places-page.scss";
+// End Places Page Section
+
+// Start Contacts Page Section
+@import "_sections/_contacts-page.scss";
+// End PContacts Page Section
+
+// Start Single Page Section
+@import "_sections/_single-place.scss";
+// End Single Page Section
+
+// Start Afisha Page Section
+@import "_sections/_afisha-page.scss";
+// End Afisha Page Section
+
+// Start Single Gallery Page Section
+@import "_sections/_single-gallery.scss";
+// End Single Gallery Page Section
+
+.menu-page {
+	padding-top: 130px;
+}
+
+.signle-gallery {
+	background-image: url("../img/post-page.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+	padding: 130px 0;
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		content: '';
+		background-color: rgba(0,0,0, .5);
+	}
+	&__content {
+		position: relative;
+		z-index: 10;
+	}
+	.no-padding {
+		padding: 0;
+	}
+	&__item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+		position: relative;
+		float: left;
+		&.fr {
+			float: right;
+		}
+		&.h100 {
+			height: 100px;
+		}
+		&.h200 {
+			height: 200px;
+		}
+		&.w50 {
+			width: 50%;
+		}
+		&.w100 {
+			width: 100%;
+		}
+	}
+}
